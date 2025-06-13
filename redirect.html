@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    window.onload = function () {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      if (/android/i.test(userAgent)) {
+        // Redirect to Google Play Store
+        window.location.href = "https://play.google.com/store/apps/details?id=com.furfolio.app&pcampaignid=web_share";
+      } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        // Redirect to Apple App Store
+        window.location.href = "https://apps.apple.com/us/app/furfolio-pet-care/id6741690615?platform=iphone";
+      } else {
+        // Redirect to website or fallback
+        window.location.href = "https://furfolio.com";
+      }
+    };
+  </script>
+</head>
+<body>
+  <p style="text-align:center;margin-top:50px;font-family:sans-serif;">Redirecting you to the app...</p>
+</body>
+</html>
